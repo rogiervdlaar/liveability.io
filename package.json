@@ -13,6 +13,7 @@
     "ejs": "^3.0.2",
     "express": "^4.17.1",
     "http-server": "^0.12.1",
-    "require": "^2.4.20"
+    "require": "^2.4.20",
+    "uglify-js": ">=2.6.0"
   }
 }
