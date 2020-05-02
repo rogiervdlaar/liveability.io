@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* background-image: url("https://source.unsplash.com/atSUvc1hMwk"); */
+    background-repeat: no-repeat;
+	  background-size: cover;
+    background-position: center;
+	  font-family: Lato;
+}
+
+
+html {
+	height: 100%;
+}
+
+#header {
+    opacity: 0.5;
+}
+
+  .navbar {
+    margin: 0;
+  }
+
+  #navbar-brand {
+    font-size: 2em;
+    color: skyblue;
+  }
+
+  .card {
+    padding: 10px;
+    text-align: center;
+    display: block;
+    margin:10px;
+    
+  }
+
+  .card-img-top {
+    max-height: 400px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-body h5 {
+    text-align: left;
+  }
+
+  .card-title {
+    margin-top: 15px;
+  }
+
+  .index {
+    color: orangered;
+  }
+
+  .index_no{
+    display: inline-block;
+    text-align: right;
+    margin: 10px 0;
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  .progress_bar {
+    height: 15px;
+    background: orange;
+    width: 0%;
+    -moz-transition: all 4s ease;
+    -moz-transition-delay: 1s;
+    -webkit-transition: all 4s ease;
+    -webkit-transition-delay: 1s;
+    transition: all 4s ease;
+    transition-delay: 1s;
+  }
+
+
+  /* .card-img-top {
+    height: 415.33px;
+    max-width: 620px;
+    /* background-size: cover; */
+    /* margin-top: 20px;
+  }
+
+  .img-card {
+    max-height: 415.33px;
+    max-width: 620px;
+    width: auto;
+    height: 415.33px;
+    text-align: center;
+    margin: 20px;
+    display: block;
+    background-size: cover;
+    background-position: center;
+  } */
+
+  /* .card-body {
+    text-align: left;
+  } */
+
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(28, 156, 199);
+  }
+  
+  .card:hover .overlay {
+    opacity: 0.8;
+  }
+
+  header {
+    background-image: url('https://source.unsplash.com/atSUvc1hMwk');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    position: relative;
+    margin-top: 0px;
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0;
+  }
+  
+  header * {
+    z-index: 1;
+  }
+  
+  header h1 {
+    margin: 0 0 30px;
+    font-size: 2.5em;
+  }
+
+  @media (max-width: 476px){
+    header h1 {
+      font-size: 1.5em;
+    }
+      form {
+        position: relative;
+        width: 350px;
+        max-width: 100%;
+      }
+      form button {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        background-color: lightskyblue;
+        border: 0;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 12px;
+        padding: 10px 22px;
+      }
+
+      h2, h2 .card-title {
+        font-size: 1.5em;
+      }
+
+       h5, .card {
+        font-size: 1em;
+
+      }
+
+
+    }
+  
+  form {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+  }
+  form :focus {
+    outline: none;
+  }
+  
+  form input {
+    border: 0;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 15px 30px;
+    width: 100%;
+  }
+  
+  form button :focus {
+    outline: none;
+  }
+
+  form button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: lightskyblue;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 30px;
+  }
+  
+  .btn {
+    background-color: #8d56fd;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    padding: 4px 10px;
+
+  }
+
+  input{
+    color: black;
+  }
+
+
+.container-marinas {
+    margin: 50px 20px;
+}
+
+#marinas {
+  display: flex;
+  flex-direction: row;
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+  .card-img-top-country {
+      color: white;
+      font-size: 0.5rem;
+      opacity: 0.9;
+      font-weight: 300;
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      margin-top: 5px;
+      }
+
+  .card-img-top-city {
+      color: green;
+      font-size: 0.5rem;
+      opacity: 0.9;
+      font-weight: 300;
+      position: absolute;
+      top: 10%;
+      left: 20%;
+  }
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  .card-img-top-country {
+      color: red;
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 300;
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      margin-top: 5px;
+      }
+
+  .card-img-top-city {
+      color: purple;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      font-weight: 300;
+      position: absolute;
+      top: 10%;
+      left: 20%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .card-img-top-country {
+      color: black;
+      font-size: 1.4rem;
+      opacity: 0.9;
+      font-weight: 300;
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      margin-top: 5px;
+      }
+
+  .card-title {
+      color: navy;
+      font-size: 1.3rem;
+      opacity: 0.8;
+      font-weight: 500;
+      justify-content: center;
+
+      /* position: absolute;
+      text-align: center; */
+      
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  .card-img-top-country {
+      color: orange;
+      font-size: 1.6rem;
+      opacity: 0.9;
+      font-weight: 300;
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      margin-top: 5px;
+      }
+
+  .card-img-top-city {
+      color: grey;
+      font-size: 2rem;
+      opacity: 0.9;
+      font-weight: 300;
+      position: absolute;
+      top: 10%;
+      left: 20%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(28, 156, 199);
+}
+
+.card:hover .overlay {
+  opacity: 0.8;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container-flex-on {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 200px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 976px){
+  .container-flex-on {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 300px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 476px){
+  .container-flex-on {
+    display: flex;
+    justify-content: center;
+    margin: 7px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 480px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+}
+
+.off{
+  display: none;
+}
+
+/* @media screen and (max-width: 992px) {
+  .container-flex {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    margin-left: 15%;
+    margin-right: 15%;
+    flex-direction: column;
+  }
+  .flex {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+} */
+
+
+
+/* .flex {
+  flex-direction: column;
+
+} */
+
+.form-group {
+  width: 250px;
+  margin-left: 20px;
+}
+
+.indexNo {
+  text-align: right;
+}
+
+.container-flex-toggleFilter {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#toggleFilter {
+    background-color: lightgrey;
+    border: 0;
+    color: rgba(25, 25, 26, 0.9);
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  /* #toggle-sliders {
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+  } */
+  #toggleFilter #toggle-sliders {
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    background: #d5d5d5;
+}
+
+#toggleFilter:hover #toggle-sliders {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}

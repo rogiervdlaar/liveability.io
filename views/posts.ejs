@@ -1,0 +1,16 @@
+<%- include ("partials/header")
+    %>
+
+    <h1>This is the posts page</h1>
+
+<% for (var i = 0; i < posts.length; i++){ %>
+    <li> <%= posts[i].title %> - <%= posts[i].author %> <img src= <%= posts[i].source %> height="42"> </li>
+<% } %>
+    
+<%- include ("partials/footer")
+    %>
+
+
+
+
+

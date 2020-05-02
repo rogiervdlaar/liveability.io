@@ -1,0 +1,15 @@
+[{
+    "Address": "Shingley Drive, Airlie Beach, QLD 4802",
+    "Berth_sizes": "12m-60m",
+    "Boatyard": "yes"
+},
+{
+    "Address": "Test1",
+    "Berth_sizes": "2m-60m",
+    "Boatyard": "Old"
+},
+{
+    "Address": "Test2",
+    "Berth_sizes": "120m-60m",
+    "Boatyard": "New"
+}]
