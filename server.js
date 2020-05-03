@@ -1,6 +1,7 @@
 //Load packages
 const express = require('express');
 const app = express();
+const nodemailer = require('nodemailer');
 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json()); 
@@ -20,81 +21,75 @@ app.get('/', function(req,res){
 });
 
 
+// //post request
+// app.post('/', function(req, res)
+//     {var name = req.body.name; 
+//     console.log(name);
+//     res.status(201).send();
+// });
+
 //post request
-app.post('/', function(req, res)
-{var body = res.json(req.body)
- var name = body.name; 
-    console.log(name);
+app.post('/', function(req, res){
+    var body = req.body 
+    //   res.json(body);
+    res.redirect('/');
+
+
+
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'rogiervdlaar@gmail.com',
+      pass: 'Tatum2011' // naturally, replace both with your real credentials or an application-specific password
+    }
+  });
+
+// const messageOptions = {
+//   from: 'rogiervdlaar@gmail.com',
+//   to: 'contact@marulatrading.com',
+//   subject: "Liveability feature request",
+//   text: 'test'
+// };
+
+
+    let to_email = req.body.email;
+    let mail_subject =  req.body.name + " - Feature request";
+    let message = req.body.feature;
+    // let attach = req.body.attach;
+ 
+ 
+    let messageOptions = {
+        from: 'rogiervdlaar@gmail.com',
+        to: to_email,
+        subject: mail_subject,
+        text: message
+        // html: message
+    };
+ 
+    // if(attach){
+    //     messageOptions = {...messageOptions, attachments: [{
+    //             filename: 'Promotion.jpg',
+    //             path: './Promotion.jpg'
+    //         }]
+    //     };
+    // }
+ 
+ 
+    transporter.sendMail(messageOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message %s sent: %s', info.messageId, info.response);
+        res.redirect('/');
+    });
 });
 
-app.get("/posts", function(req,res){
-    var posts = [
-        {title: "Wat is it called?", author: "me", source: "https://source.unsplash.com/Lml_PhRFbsk"},
-        {title: "You didn't know this!", author: "you", source: "https://source.unsplash.com/0oPpbZVd-zY"},
-        {title: "How to get stuff done", author: "someone else", source: "https://source.unsplash.com/ouZj1RPPiTU"}
-    ];
-    res.render("posts", {posts:posts});
+
+
+
+app.get("*", function(req,res){
+	res.send("catchall!") 
 });
-
-// app.get("/", function(req,res){
-//     console.log(req.body);
-
-
-// const transporter = nodemailer.createTransport({
-//     service: 'gmail',
-//     auth: {
-//       user: 'rogiervdlaar@gmail.com',
-//       pass: 'Tatum2011' // naturally, replace both with your real credentials or an application-specific password
-//     }
-//   });
-
-// // app.post("/sendmail", function(req,res){
-// //     console.log(req.body);
-
-// // const messageOptions = {
-// // //   from: 'rogiervdlaar@gmail.com',
-// // //   to: 'contact@marulatrading.com',
-// // //   subject: "Liveability feature request",
-// // //   text: 'test'
-// // // };
-
-
-//     let to_email = "rogiervdlaar@gmail.com";
-//     let mail_subject =  req.body.name;
-//     let message = "test";
-//     // let attach = req.body.attach;
- 
- 
-//     let messageOptions = {
-//         from: 'rogiervdlaar@gmail.com',
-//         to: to_email,
-//         subject: mail_subject,
-//         text: message
-//         // html: message
-//     };
- 
-//     // if(attach){
-//     //     messageOptions = {...messageOptions, attachments: [{
-//     //             filename: 'Promotion.jpg',
-//     //             path: './Promotion.jpg'
-//     //         }]
-//     //     };
-//     // }
- 
- 
-//     transporter.sendMail(messageOptions, (error, info) => {
-//         if (error) {
-//             return console.log(error);
-//         }
-//         console.log('Message %s sent: %s', info.messageId, info.response);
-//         res.redirect('/');
-//     });
-// });
-// });
-
-
-// app.get("*", function(req,res){
-// 	res.send("catchall!") 
-// });
 
 

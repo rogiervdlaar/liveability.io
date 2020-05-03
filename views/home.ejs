@@ -62,8 +62,6 @@
     </div>
 </div>
 
-
-
 <!-- Button trigger modal Put in header-->
 
 
@@ -78,34 +76,26 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-
+      <form action='/' method="POST" autocomplete="off">
       <div class="modal-body">
-
-          <form action='/' method="POST" autocomplete="off">
-          
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" class="form-control" id="name" name="name">
-              <h6>we'll never share your email with anyone! </h6>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="text" class="form-control" id="email" name="email">
-            </div>
-
-            <div class="form-group">
-              <label for="feature">Feature:</label>
-              <textarea class="form-control" id="feature" name="feature" rows="5" placeholder="Tell us what we can improve?" required></textarea>
-            </div>
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" type="submit" class="btn btn-primary submit" data-dismiss="modal" >Submit</button>
-      </div>
-      </form>
-      </div>
-    
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+            <h6>we'll never share your email with anyone! </h6>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email">
+            <h6>we'll never share your email with anyone! </h6>
+          </div>
+          <div class="form-group">
+            <label for="feature">Request:</label>
+            <textarea type="text" class="form-control" id="feature" rows="10" name="feature"></textarea>
+            <h6>we'll never share your email with anyone! </h6>
+          </div>
+          <button type="submit" class="btn btn-primary submit" value="Submit">Submit</button>
+        </div>
+        </form>
     </div>
   </div>
 </div>
