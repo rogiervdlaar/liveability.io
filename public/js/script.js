@@ -456,3 +456,7 @@ $('#ex9').change();
   x.classList.add("off");
   };
 }
+
+var name = document.getElementsByName('name');
+// var email = document.getElementsByName('email');
+var feature = document.getElementsByName('feature');
