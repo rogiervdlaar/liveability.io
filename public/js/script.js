@@ -85,31 +85,31 @@ function showData(banana) {
                     <img class="card-img-top" loading="lazy" src="${city.Img}" alt="">
                         <div class="card-block text-center"><h2 class="card-title" class="card-block text-center">${city.Rank}. ${city.City}</h2></div>
                         <div class="card-body">
-                        <h5 class="duration">Quality of Life: <div class="maxQOL progress-bar" role="progressbar" aria-valuenow="100"
+                        <h5 class="duration">⛱️ Quality of Life: <div class="maxQOL progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Quality_of_Life_Index*100/maxQOL)}</div></h5>
                         
-                        <h5 class="duration">Purchasing Power Index: <div class="maxPPI progress-bar" role="progressbar" aria-valuenow="100"
+                        <h5 class="duration">💳 Purchasing Power Index: <div class="maxPPI progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Purchasing_Power_Index*100/maxPPI)}</div></h5>
 
-                        <h5 class="duration">Safety: <div class="maxSafety progress-bar" role="progressbar" aria-valuenow="100"
+                        <h5 class="duration">🚓 Safety: <div class="maxSafety progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Safety_Index*100/maxSafety)}</div></h5>
 
-                        <h5 class="duration">Health Care: <div class="maxHC progress-bar" role="progressbar" aria-valuenow="100"
+                        <h5 class="duration">⚕️ Health Care: <div class="maxHC progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Health_Care_Index*100/maxHC)}</div></h5>
 
-                        <h5 class="duration">Cost of Living: <div class="maxCOLI progress-bar" role="progressbar" aria-valuenow="100"
+                        <h5 class="duration">💰 Cost of Living: <div class="maxCOLI progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Cost_of_Living_Index*100/maxCOLI)}</div></h5>
                         
-                        <h5 class="duration">Property Price to income: <div class="maxPPIR progress-bar" role="progressbar" aria-valuenow="100"
+                        <h5 class="duration">🏠 Property Price to income: <div class="maxPPIR progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Property_Price_to_Income_Ratio*100/maxPPIR)}</span></h5>
                         
-                        <h5 class="duration">Traffic: <div class="maxTraffic progress-bar" role="progressbar" aria-valuenow="100"
+                        <h5 class="duration">🚦 Traffic: <div class="maxTraffic progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Traffic_Commute_Time_Index*100/maxTraffic)}</div></span></h5>
                         
-                        <h5 class="duration">Polluction: <div class="maxPol progress-bar" role="progressbar" aria-valuenow="100"
+                        <h5 class="duration">🏭 Pollution: <div class="maxPol progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Pollution_Index*100/maxPol)}</div></h5>
                         
-                        <h5 class="duration">Climate: <div class="maxClimate progress-bar" role="progressbar" aria-valuenow="100"
+                        <h5 class="duration">🌲 Climate: <div class="maxClimate progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Climate_Index*100/maxClimate)}</div></h5>
                     </div>
                 </div>
