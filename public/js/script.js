@@ -100,8 +100,8 @@ function showData(banana) {
                         <h5 class="duration">💰 Cost of Living: <div class="maxCOLI progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Cost_of_Living_Index*100/maxCOLI)}</div></h5>
                         
-                        <h5 class="duration">🏠 Property Price to income: <div class="maxPPIR progress-bar" role="progressbar" aria-valuenow="100"
-                        aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Property_Price_to_Income_Ratio*100/maxPPIR)}</span></h5>
+                        <h5 class="duration">🏠 Property Price to income: <div class="maxPPIR progress-bar" role="progressbar" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="10" style="width: 0%">${Math.round(city.Property_Price_to_Income_Ratio)}</span></h5>
                         
                         <h5 class="duration">🚦 Traffic: <div class="maxTraffic progress-bar" role="progressbar" aria-valuenow="100"
                         aria-valuemin="0" aria-valuemax="100" style="width: 0%">${Math.round(city.Traffic_Commute_Time_Index*100/maxTraffic)}</div></span></h5>
@@ -303,7 +303,7 @@ function progressPPIR(){
   var PPIR = document.getElementsByClassName('maxPPIR');
 for(var o=0; o<PPIR.length; o++) {
   var ratio = PPIR[o].innerText;
-  PPIR[o].style.width = ratio+ '%';
+  PPIR[o].style.width = (ratio*10)+ '%';
       }
 }
 
@@ -420,7 +420,7 @@ $('#ex7').change();
 $('#ex8').on('change', function(e) {
   PolFilter = e.target.value;
   document.getElementById("ex8Val").innerHTML = PolFilter;
-  $('#ex8').value = COLIFilter;
+  $('#ex8').value = PolFilter;
   getData();
 });
 $('#ex8').change();
