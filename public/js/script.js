@@ -303,7 +303,7 @@ function progressPPIR(){
   var PPIR = document.getElementsByClassName('maxPPIR');
 for(var o=0; o<PPIR.length; o++) {
   var ratio = PPIR[o].innerText;
-  PPIR[o].style.width = (ratio*10)+ '%';
+  PPIR[o].style.width = (ratio*100/47)+ '%';
       }
 }
 
