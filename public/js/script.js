@@ -369,7 +369,7 @@ $('#ex1').change();
 
 //Cost of Living
 $('#ex2').on('change', function(e) {
-  COLIFilter = e.target.value;
+  PPFilter = e.target.value;
   document.getElementById("ex2Val").innerHTML = PPFilter;
   $('#ex2').value = PPFilter;
   getData();
@@ -378,7 +378,7 @@ $('#ex2').change();
 
 //
 $('#ex3').on('change', function(e) {
-  PPFilter = e.target.value;
+  COLIFilter = e.target.value;
   document.getElementById("ex3Val").innerHTML = COLIFilter;
   $('#ex3').value = COLIFilter;
   getData();
