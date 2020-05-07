@@ -76,8 +76,8 @@ async function getData() {
       if(searchResult.length === 0 ){
         result.innerHTML = 
     `<div class = "flex-container-notFound">
-    <div> Oops...looks like we don't have that location. Please try again!
     <div><img class="notFoundImg" src="./img/Try again.jpg" alt="">
+    <div> Oops...looks like we don't have that location. Please try again!
     </div>
     </div>
     </div>`
@@ -470,6 +470,6 @@ $('#ex9').change();
   };
 }
 
-var name = document.getElementsByName('name');
-// var email = document.getElementsByName('email');
-var feature = document.getElementsByName('feature');
+// var name = document.getElementsByName('name');
+// // var email = document.getElementsByName('email');
+// var feature = document.getElementsByName('feature');
