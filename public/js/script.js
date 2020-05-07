@@ -67,14 +67,27 @@ async function getData() {
     })
     searchResult = searchResult.filter(x => x.City.toLowerCase().includes(searchTerm));
     
-    calculateAll();
-    showData(searchResult);
-    progressAll();
+      calculateAll();
+      showData(searchResult);
+      progressAll();
+
+      $(document).ready(function(){ 
+
+      if(searchResult.length === 0 ){
+        result.innerHTML = 
+    `<div class = "flex-container-notFound">
+    <div> Oops...looks like we don't have that location. Please try again!
+    <div><img class="notFoundImg" src="./img/Try again.jpg" alt="">
+    </div>
+    </div>
+    </div>`
+  }
+})
 }
 
 //pass in search result
 function showData(banana) {
-    let output = "";
+     let output = "";
 
     banana.forEach(city => {
     output += 

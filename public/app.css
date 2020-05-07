@@ -258,6 +258,23 @@ h6 {
 
 }
 
+.flex-container-notFound{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {  
   .card-img-top-country {
