@@ -28,14 +28,16 @@ app.get('/', function(req,res){
 //     res.status(201).send();
 // });
 
+
+
+
+////EMAILING COMPONENT
+
 //post request
 app.post('/', function(req, res){
     var body = req.body 
     //   res.json(body);
     res.redirect('/');
-
-
-
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',

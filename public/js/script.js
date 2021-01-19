@@ -48,6 +48,23 @@ var searchResult = [];
 // }
 // initialData();
 
+
+var i = 0;
+var txt = 'Type your search here.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("tester").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+  // document.getElementById("tester").innerHTML = "";
+}
+typeWriter();
+
+
+
 async function getData() {
     const res = await fetch(`${file}`);
     dataInitial = await res.json();
