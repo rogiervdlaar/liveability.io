@@ -14,7 +14,7 @@
     "ejs": "^3.1.2",
     "express": "^4.17.1",
     "http-server": "^0.12.3",
-    "nodemailer": "^6.4.6",
+    "nodemailer": "^6.4.16",
     "require": "^2.4.20",
     "uglify-js": ">=2.6.0"
   }
